@@ -14,11 +14,16 @@ class CantantesSeeder extends Seeder
     {
         $cantantes = Cantante::create([
         	'nombre' => 'Iann Dior',
-        	'imagen' => 'imagenes/cantantes/ianndior.jpeg'
+        	'imagen' => 'imagenes/cantantes/ianndior.jpeg',
+            'edad' => 21
         ]);
         $cantantes = Cantante::create([
         	'nombre' => 'Juice WRLD',
-        	'imagen' => 'imagenes/cantantes/juice.png'
+        	'imagen' => 'imagenes/cantantes/juice.png',
+            'edad' => 21
         ]);
+        
+
+        
     }
 }

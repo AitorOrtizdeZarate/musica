@@ -9,7 +9,7 @@
 	        <div class="content col-12">
 	            <div class="links bg-secondary text-white row justify-content-around" >
 	            	
-	               <h1>Musica</h1>
+	               <a href="/" class="text-white"><h1>Musica</h1></a>
 	               
 	            </div>
 	           <br><br>

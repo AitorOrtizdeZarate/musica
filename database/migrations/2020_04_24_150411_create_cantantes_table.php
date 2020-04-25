@@ -17,6 +17,7 @@ class CreateCantantesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('imagen')->nullable();
+            $table->integer('edad');
             $table->timestamps();
         });
     }
