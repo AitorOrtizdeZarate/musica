@@ -13,14 +13,24 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("imagenes/fondo.jpg");
-                background-repeat: no-repeat;
-                background-size: 100%;
+                background-color: #00E5F4;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+
+            }
+            #fondo{
+                background-image: url("imagenes/fondo.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 100%;
+            }
+            #footer{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
             }
             .full-height {
                 height: 100vh;

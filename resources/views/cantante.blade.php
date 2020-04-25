@@ -2,10 +2,10 @@
 
 @section('content')
    
-   <div class="card-deck">
+   <div class="card-deck" style="margin-top: 3%;">
     @foreach($cantantes as $cantante)
     	<div class=" col-3" style="height: 550px;">
-		  <div class="card">
+		  <div class="card border border-dark">
 		    <img class="card-img-top" src="{{$cantante->imagen}}" alt="Card image cap" style="height: 350px;">
 		    <div class="card-body">
 		      <h5 class="card-title">{{$cantante->nombre}}</h5>

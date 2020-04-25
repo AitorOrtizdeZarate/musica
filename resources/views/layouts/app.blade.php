@@ -12,11 +12,14 @@
 	               <a href="/" class="text-white"><h1>Musica</h1></a>
 	               
 	            </div>
-	           <br><br>
-	            <div class="op">
+
+	        </div>
+	        <div class="content">
+	        	<div class="op">
 	                @yield('content')
 	            </div>
 	        </div>
+	        
 	    
 
 		<!-- Optional JavaScript -->
