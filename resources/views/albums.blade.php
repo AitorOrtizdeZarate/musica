@@ -17,9 +17,9 @@
 	    @foreach($cantantes->album as $album)
 	    	<div class="col-3" style="height: 500px;">
 			  <div class="card border border-dark">
-			    <img class="card-img-top" src="/{{$album->imagen}}" alt="Card image cap" style="height: 250px;">
+			    <img class="card-img-top border-bottom border-dark" src="/{{$album->imagen}}" alt="Card image cap" style="height: 250px;">
 			    <div class="card-body">
-			      <h5 class="card-title">{{$album->nombre}}</h5>
+			      <h5 class="card-title" style="height: 50px;">{{$album->nombre}}</h5>
 			      <p class="card-text">{{$album->fecha}}</p>
 			      <p class="card-text">{{$album->genero}}</p>
 			    </div>
