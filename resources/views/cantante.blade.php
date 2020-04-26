@@ -12,7 +12,7 @@
 		      <p class="card-text">{{$cantante->edad}} años</p>
 		    </div>
 		    <div class="card-footer">
-		       <a href="" class="btn btn-info btn-block">Ver Cantante</a>
+		       <a href="{{route('cantante.show', $cantante->id)}}" class="btn btn-info btn-block">Ver Cantante</a>
 		    </div>
 		  </div>
 		</div>

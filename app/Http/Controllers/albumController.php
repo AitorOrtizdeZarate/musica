@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cantante;
 
-class cantanteController extends Controller
+class albumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class cantanteController extends Controller
      */
     public function index()
     {
-        $cantantes = Cantante::all();
-        return view('cantante', compact('cantantes'));
+        //
     }
 
     /**
@@ -47,9 +45,7 @@ class cantanteController extends Controller
      */
     public function show($id)
     {
-        $cantantes = Cantante::find($id);
-        return view('albums')->with('cantantes', $cantantes);
-
+        //
     }
 
     /**
