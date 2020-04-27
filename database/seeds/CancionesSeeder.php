@@ -243,5 +243,164 @@ class CancionesSeeder extends Seeder
             'duracion' => '2:22',
             'album_id' => 3
         ]);
+
+        //Goodbye & Good Riddance
+        $canciones = Cancion::create([
+            'nombre' => 'Intro',
+            'duracion' => '1:15',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'All Girs Are The Same',
+            'duracion' => '2:46',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Lucid Dreams',
+            'duracion' => '4:00',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Wasted',
+            'duracion' => '4:18',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Armed And Dangerous',
+            'duracion' => '2:50',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Black & White',
+            'duracion' => '3:07',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Lean With Me',
+            'duracion' => '2:56',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'I`ll be Fine',
+            'duracion' => '4:04',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Used To',
+            'duracion' => '2:56',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Candles',
+            'duracion' => '3:04',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Scared Of Love',
+            'duracion' => '2:51',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Hurt Me',
+            'duracion' => '2:02',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Im Still',
+            'duracion' => '3:13',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'End Of The Road',
+            'duracion' => '2:43',
+            'album_id' => 4
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Long Gone',
+            'duracion' => '3:07',
+            'album_id' => 4
+        ]);
+
+        //Wrld on Drugs
+        $canciones = Cancion::create([
+            'nombre' => 'Jet Lag',
+            'duracion' => '4:31',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Astronauts',
+            'duracion' => '2:50',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Fine China',
+            'duracion' => '2:22',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Red Bentley',
+            'duracion' => '3:28',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Make It Black',
+            'duracion' => '1:43',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Oxy',
+            'duracion' => '3:00',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => '7 Am Freestyle',
+            'duracion' => '3:13',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Different',
+            'duracion' => '2:31',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Shorty',
+            'duracion' => '2:01',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Realer N Realer',
+            'duracion' => '2:51',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'No Issue',
+            'duracion' => '3:05',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'WRLD On Drugs',
+            'duracion' => '3:37',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Afterlife',
+            'duracion' => '3:37',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Aint Livin Right',
+            'duracion' => '3:51',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Transformer',
+            'duracion' => '3:16',
+            'album_id' => 5
+        ]);
+        $canciones = Cancion::create([
+            'nombre' => 'Hard Work Pays Off',
+            'duracion' => '3:45',
+            'album_id' => 5
+        ]);
     }
 }
