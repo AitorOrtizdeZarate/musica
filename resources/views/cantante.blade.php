@@ -2,6 +2,8 @@
 
 @section('content')
    
+   <h1 style="font-size: 70px;">Cantantes</h1>
+   
    <div class="card-deck" style="margin-top: 3%;">
     @foreach($cantantes as $cantante)
     	<div class=" col-3" style="height: 550px;">

@@ -21,7 +21,7 @@ class AlbumSeeder extends Seeder
             'cantante_id' => 1
         ]);
         $albums = Album::create([
-            'nombre' => 'nothings ever good enough',
+            'nombre' => 'Nothings ever good enough',
             'imagen' => 'imagenes/albums/nothing.jpg',
             'fecha' => '2019/04/12',
             'genero' => 'Hip-hop / Rap',

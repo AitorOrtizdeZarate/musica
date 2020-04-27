@@ -24,7 +24,7 @@
 			      <p class="card-text">{{$album->genero}}</p>
 			    </div>
 			    <div class="card-footer">
-			       <a href="" class="btn btn-info btn-block">Ver Album</a>
+			       <a href="{{route('album.show', $album->id)}}" class="btn btn-info btn-block">Ver Album</a>
 			    </div>
 			  </div>
 			</div>
