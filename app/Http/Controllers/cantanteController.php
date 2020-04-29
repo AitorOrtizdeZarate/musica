@@ -25,7 +25,8 @@ class cantanteController extends Controller
      */
     public function create()
     {
-        //
+        $cantantes = Cantante::all();
+        return view('form.cantante')->with('cantantes', $cantantes); 
     }
 
     /**
@@ -36,7 +37,16 @@ class cantanteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cantante = new Cantante;
+        $cantante->nombre = $request->input('nombre');
+        $cantante->edad = $request->input('edad');
+        /*$foto = $request->file('imagen')->getClientOriginalName();
+        $cantante->imagen = $request->file('imagen')->move("imagenes/cantantes/".$foto);*/
+        $cantante->imagen = $request->imagen->getClientOriginalName();
+        /* Esto guarda la imagen en storage */
+        /*request()->file('imagen')->storeAs(public_path(),'imagenes/cantantes/'.$request->imagen->getClientOriginalName());*/
+        $cantante->save();
+        return redirect()->route('cantante.index');
     }
 
     /**

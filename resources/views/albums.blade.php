@@ -8,9 +8,10 @@
   	<img src="/{{$cantantes->imagen}}" class="rounded-circle border border-dark"  style="width: 325px;">
   </div>
 
-  <hr>
+  <!--<hr>
   <h2 style="font-size: 50px;">Canciones mas escuchadas</h2>
-  <hr>
+  -->
+  <hr> 
 
   	<div class="d-flex justify-content-center">
 	  <div class="card-deck col-8" style="margin-top: 3%;">

@@ -19,6 +19,9 @@
 		  </div>
 		</div>
 		 @endforeach
+		 <div class="d-flex align-items-center mx-5" style="height: 450px;">
+		 	<a href="{{route('cantante.create')}}"><img src="/imagenes/plus.png" style="width: 200px; height: 200px;" class="border border-dark rounded-circle"></a>
+		 </div>
 	</div>
 
    

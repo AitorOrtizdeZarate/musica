@@ -23,6 +23,7 @@ class CantantesSeeder extends Seeder
             'edad' => 21
         ]);
         
+        
 
         
     }
