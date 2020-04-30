@@ -56,9 +56,11 @@
            
       
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+         <div class="content">
+	        	<div class="op">
+	                @yield('content')
+	            </div>
+	        </div>
 
     </div>
 
