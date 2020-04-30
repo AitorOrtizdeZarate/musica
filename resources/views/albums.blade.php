@@ -13,6 +13,10 @@
   -->
   <hr> 
 
+  	<div class="d-flex align-items-center justify-content-end mx-5" style="height: 50px;">
+		 <a href="{{route('album.create')}}"><img src="/imagenes/plus.png" style="width: 50px; height: 50px;" class="border border-dark rounded-circle"></a>
+	</div>
+
   	<div class="d-flex justify-content-center">
 	  <div class="card-deck col-8" style="margin-top: 3%;">
 	    @foreach($cantantes->album as $album)

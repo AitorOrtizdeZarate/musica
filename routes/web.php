@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 Route::resource('cantante', 'cantanteController');
 Route::resource('album', 'albumController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
