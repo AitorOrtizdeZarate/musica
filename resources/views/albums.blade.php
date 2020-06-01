@@ -12,7 +12,9 @@
   <h2 style="font-size: 50px;">Canciones mas escuchadas</h2>
   -->
   <hr> 
-
+  	<div>
+  		<h2 style="font-size: 50px;">Albums</h2>
+  	</div>
   	<div class="d-flex align-items-center justify-content-end mx-5" style="height: 50px;">
 		 <a href="{{route('album.create')}}"><img src="/imagenes/plus.png" style="width: 50px; height: 50px;" class="border border-dark rounded-circle"></a>
 	</div>
