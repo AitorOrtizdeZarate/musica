@@ -43,8 +43,16 @@ class albumController extends Controller
         $albums->genero = $request->input('genero');
         $albums->fecha = $request->input('fecha');
 
+        //Estas dos lineas guarda la ruta de la foto en la base de datos
         $foto = $request->file('imagen')->getClientOriginalName();
-        $albums->imagen = $request->file('imagen')->store('imagenes/albums');
+        $albums->imagen = "imagenes/albums/".$foto;
+
+        //Estas dos lineas guardan la imagen seleccionada en la carpeta public
+        $file = $request->file('imagen');
+        $file->storeAs('albums',$foto, ['disk' => 'my_files']);
+
+
+
         $albums->save();
         return redirect()->route('home');
     }
