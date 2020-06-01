@@ -23,3 +23,7 @@ Route::resource('cancion', 'cancionesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('fav', function(){
+	return view('fav');
+});

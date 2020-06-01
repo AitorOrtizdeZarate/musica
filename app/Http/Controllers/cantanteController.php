@@ -40,13 +40,17 @@ class cantanteController extends Controller
         $cantante = new Cantante;
         $cantante->nombre = $request->input('nombre');
         $cantante->edad = $request->input('edad');
+
+        //Estas dos lineas guarda la ruta de la foto en la base de datos
         $foto = $request->file('imagen')->getClientOriginalName();
-        /*$cantante->imagen = $request->file('imagen')->move("imagenes/cantantes/".$foto);*/
-
-
-
-        $cantante->imagen = $request->file('imagen')->store('imagenes/cantantes');
-
+        $cantante->imagen = "imagenes/cantantes/".$foto;
+        
+        //Estas dos lineas guardan la imagen seleccionada en la carpeta public
+        $file = $request->file('imagen');
+        $file->storeAs('cantantes',$foto, ['disk' => 'my_files']);
+        
+        
+        /*$cantante->imagen = $request->file('imagen')->store('imagenes/cantantes/'.$foto);*/
         /*$cantante->imagen = $request->imagen->getClientOriginalName();*/
         /* Esto guarda la imagen en storage */
         /*request()->file('imagen')->storeAs(public_path(),'imagenes/cantantes/'.$request->imagen->getClientOriginalName());*/

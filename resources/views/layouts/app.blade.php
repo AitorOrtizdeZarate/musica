@@ -8,12 +8,12 @@
            
             <div class="content col-12">
 
-	            <div class="links bg-secondary text-white row justify-content-center align-items-center" >
+	            <div class="links bg-secondary text-white row justify-content-between align-items-center" >
 	            	
 	               <div class="col-7 d-flex justify-content-end">
-	               		<a href="/" class="text-white"><h1>MUSICA</h1></a>
+	               		<a href="/" class="text-white px-5"><h1>MUSICA</h1></a>
 	               </div>
-	               <div class="col-5 d-flex justify-content-end">
+	               <div class="col-2 d-flex justify-content-end">
 	               <ul class="navbar-nav ml-auto text-white d-flex justify-content-end">
                         <!-- Authentication Links -->
                         @guest
@@ -32,6 +32,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item text-white bg-dark" href="fav">
+                                        {{ __('Favoritos') }}
+                                    </a>
                                     <a class="dropdown-item text-white bg-dark" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -41,6 +44,8 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
+                                   
                                 </div>
                             </li>
                         @endguest

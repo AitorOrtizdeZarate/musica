@@ -12,6 +12,12 @@
 		    <div class="card-body">
 		      <h5 class="card-title">{{$cantante->nombre}}</h5>
 		      <p class="card-text">{{$cantante->edad}} años</p>
+		      @guest
+		      @else
+		      <div class="d-flex justify-content-end">
+		      	<img src="/imagenes/fav.png" style="width: 20px; height: 20px;">
+		      </div>
+		      @endguest
 		    </div>
 		    <div class="card-footer">
 		       <a href="{{route('cantante.show', $cantante->id)}}" class="btn btn-info btn-block">Ver Cantante</a>
