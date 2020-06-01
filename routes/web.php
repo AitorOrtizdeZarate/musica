@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::resource('cantante', 'cantanteController');
 Route::resource('album', 'albumController');
+Route::resource('cancion', 'cancionesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

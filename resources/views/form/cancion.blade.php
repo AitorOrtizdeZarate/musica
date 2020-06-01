@@ -2,10 +2,10 @@
 
 @section('content')
 
-<h2>Añadir Cantante</h2>
+<h2>Añadir Album</h2>
 
 <div class="d-flex justify-content-center my-5">
-	<form action="{{route('cantante.store')}}" method="post" enctype="multipart/form-data" >
+	<form action="{{route('cancion.store')}}" method="post" enctype="multipart/form-data" >
 		 @csrf
 		<div class="d-flex justify-content-between align-items-center">
 			Nombre: 
@@ -15,18 +15,13 @@
 		</div>
 		<br>
 		<div class="d-flex justify-content-between align-items-center">
-			Edad: 
+			Duracion: 
 			<div>
-				<input type="number" name="edad" value="{{old('edad')}}">
+				<input type="text" name="duracion" value="{{old('duracion')}}" placeholder="0:00">
 			</div>
 		</div>
 		<br>
-		<div class="d-flex justify-content-between align-items-center">
-			Imagen:
-			<div>
-				<input type="file" name="imagen">
-			</div>
-		</div>
+		
 		<br>
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Cantante" class="btn btn-info btn-block col-6">

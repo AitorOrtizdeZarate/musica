@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cantante;
+use App\Cancion;
 
-class cantanteController extends Controller
+class cancionesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class cantanteController extends Controller
      */
     public function index()
     {
-        $cantantes = Cantante::all();
-        return view('cantante', compact('cantantes'));
+        //
     }
 
     /**
@@ -25,8 +24,8 @@ class cantanteController extends Controller
      */
     public function create()
     {
-        $cantantes = Cantante::all();
-        return view('form.cantante')->with('cantantes', $cantantes); 
+        $canciones = Cancion::all();
+        return view('form.cancion')->with('canciones', $canciones); 
     }
 
     /**
@@ -37,21 +36,11 @@ class cantanteController extends Controller
      */
     public function store(Request $request)
     {
-        $cantante = new Cantante;
-        $cantante->nombre = $request->input('nombre');
-        $cantante->edad = $request->input('edad');
-        $foto = $request->file('imagen')->getClientOriginalName();
-        /*$cantante->imagen = $request->file('imagen')->move("imagenes/cantantes/".$foto);*/
-
-
-
-        $cantante->imagen = $request->file('imagen')->store('imagenes/cantantes');
-
-        /*$cantante->imagen = $request->imagen->getClientOriginalName();*/
-        /* Esto guarda la imagen en storage */
-        /*request()->file('imagen')->storeAs(public_path(),'imagenes/cantantes/'.$request->imagen->getClientOriginalName());*/
-        $cantante->save();
-        return redirect()->route('cantante.index');
+        $canciones = new Cancion;
+        $canciones->nombre = $request->input('nombre');
+        $canciones->duracion = $request->input('duracion');
+        $canciones->save();
+        return redirect()->route('home');
     }
 
     /**
@@ -62,9 +51,7 @@ class cantanteController extends Controller
      */
     public function show($id)
     {
-        $cantantes = Cantante::find($id);
-        return view('albums')->with('cantantes', $cantantes);
-
+        //
     }
 
     /**

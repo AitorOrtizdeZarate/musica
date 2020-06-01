@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Album;
+use App\Cantante;
 
 class albumController extends Controller
 {
@@ -14,7 +15,8 @@ class albumController extends Controller
      */
     public function index()
     {
-        //
+        $cantantes = Cantante::find($id);
+        return view('albums')->with('cantantes', $cantantes);
     }
 
     /**
@@ -24,7 +26,8 @@ class albumController extends Controller
      */
     public function create()
     {
-        //
+        $albums = Album::all();
+        return view('form.album')->with('albums', $albums); 
     }
 
     /**
@@ -35,7 +38,15 @@ class albumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $albums = new Album;
+        $albums->nombre = $request->input('nombre');
+        $albums->genero = $request->input('genero');
+        $albums->fecha = $request->input('fecha');
+
+        $foto = $request->file('imagen')->getClientOriginalName();
+        $albums->imagen = $request->file('imagen')->store('imagenes/albums');
+        $albums->save();
+        return redirect()->route('home');
     }
 
     /**
