@@ -15,8 +15,7 @@ class albumController extends Controller
      */
     public function index()
     {
-        $cantantes = Cantante::find($id);
-        return view('albums')->with('cantantes', $cantantes);
+        //
     }
 
     /**
@@ -26,6 +25,7 @@ class albumController extends Controller
      */
     public function create()
     {
+        
         $albums = Album::all();
         return view('form.album')->with('albums', $albums); 
     }
