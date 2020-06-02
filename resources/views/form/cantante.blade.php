@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="my-5">
 <h2>Añadir Cantante</h2>
 
 <div class="d-flex justify-content-center my-5">
@@ -32,6 +32,7 @@
 			<input type="submit" value="Añadir Cantante" class="btn btn-info btn-block col-6">
 		</div>
 	</form>
+</div>
 </div>
 
 @endsection

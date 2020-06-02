@@ -51,10 +51,12 @@ class albumController extends Controller
         $file = $request->file('imagen');
         $file->storeAs('albums',$foto, ['disk' => 'my_files']);
 
+        $albums->cantante_id = $request->input('cantante');
+
 
 
         $albums->save();
-        return redirect()->route('home');
+        return redirect()->route('cantante.index');
     }
 
     /**

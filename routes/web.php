@@ -24,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('fav', function(){
+
+Route::get('fav', function () {
 	return view('fav');
-});
+})->middleware('email');
+
