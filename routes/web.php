@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('cantante', 'cantanteController');
+Route::get('cantante/{id}/crearalbum', 'albumController@createAlbum')->name('album.createAlbum');
 Route::resource('album', 'albumController');
 Route::resource('cancion', 'cancionesController');
 Auth::routes();
@@ -27,5 +28,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('fav', function () {
 	return view('fav');
-})->middleware('email');
+});
 

@@ -104,4 +104,11 @@ class albumController extends Controller
     {
         //
     }
+
+    public function createAlbum($id)
+    {
+        $cantante = Cantante::find($id);
+        $albums = Album::all();
+        return view('form.album')->with('cantante', $cantante)->with('albums', $albums);
+    }
 }
