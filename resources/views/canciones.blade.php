@@ -10,9 +10,9 @@
   <hr>
 
 
-<div class="d-flex align-items-center justify-content-end mx-5" style="height: 50px;">
+<!--<div class="d-flex align-items-center justify-content-end mx-5" style="height: 50px;">
      <a href="{{route('cancion.createCancion', $albums->id)}}"><img src="/imagenes/plus.png" style="width: 50px; height: 50px;" class="border border-dark rounded-circle"></a>
-  </div>
+  </div>-->
 <div class="d-flex justify-content-center ">
   <div class="col-9 row d-flex justify-content-center">
     @foreach($albums->cancion as $cancion)

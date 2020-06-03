@@ -42,7 +42,7 @@ class cancionesController extends Controller
         $canciones->duracion = $request->input('duracion');
         $canciones->album_id = $request->input('album');
         $canciones->save();
-        return redirect()->route('album.show', $canciones->album_id);
+        return redirect()->route('cancion.createCancion2', $canciones->album_id);
     }
 
     /**
@@ -95,5 +95,11 @@ class cancionesController extends Controller
         $album = Album::find($id);
         $canciones = Cancion::all();
         return view('form.cancion')->with('album', $album)->with('canciones', $canciones);
+    }
+    public function createCancion2($id)
+    {
+        $album = Album::find($id);
+        $canciones = Cancion::all();
+        return view('form.cancion2')->with('album', $album)->with('canciones', $canciones);
     }
 }

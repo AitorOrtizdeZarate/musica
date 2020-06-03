@@ -29,6 +29,11 @@
 	</form>
 
 </div>
+	<div class="d-flex justify-content-center">
+		<div class="col-6">
+		<a href="{{route('album.show', $album->id)}}" class="btn btn-info btn-lg btn-block">No hay mas canciones, Ver el Album.</a>
+	</div>
+	</div>
 </div>
 
 @endsection
