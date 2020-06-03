@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::resource('cantante', 'cantanteController');
 Route::get('cantante/{id}/crearalbum', 'albumController@createAlbum')->name('album.createAlbum');
+Route::get('album/{id}/crearcancion', 'cancionesController@createCancion')->name('cancion.createCancion');
 Route::resource('album', 'albumController');
 Route::resource('cancion', 'cancionesController');
 Auth::routes();

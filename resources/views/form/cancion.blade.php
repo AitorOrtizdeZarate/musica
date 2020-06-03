@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<br>
-		
+		<input type="hidden" name="album" value="{{$album->id}}">
 		<br>
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Cancion" class="btn btn-info btn-block col-6">

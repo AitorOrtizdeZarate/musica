@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cancion;
+use App\Album;
 
 class cancionesController extends Controller
 {
@@ -39,8 +40,9 @@ class cancionesController extends Controller
         $canciones = new Cancion;
         $canciones->nombre = $request->input('nombre');
         $canciones->duracion = $request->input('duracion');
+        $canciones->album_id = $request->input('album');
         $canciones->save();
-        return redirect()->route('home');
+        return redirect()->route('album.show', $canciones->album_id);
     }
 
     /**
@@ -86,5 +88,12 @@ class cancionesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function createCancion($id)
+    {
+        $album = Album::find($id);
+        $canciones = Cancion::all();
+        return view('form.cancion')->with('album', $album)->with('canciones', $canciones);
     }
 }

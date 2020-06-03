@@ -56,7 +56,7 @@ class albumController extends Controller
 
 
         $albums->save();
-        return redirect()->route('cantante.index');
+        return redirect()->route('cancion.createCancion', $albums->id);
     }
 
     /**
