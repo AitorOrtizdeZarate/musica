@@ -13,6 +13,16 @@
 		      <h5 class="card-title">{{$cantante->nombre}}</h5>
 		      <p class="card-text">{{$cantante->edad}} años</p>
 		      @guest
+		      <form action="{{route('cantante.destroy', $cantante->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <div class="d-flex justify-content-end">
+		      	
+		      	<input type="image" type="submit" src="/imagenes/delete.png" style="width: 20px; height: 20px;">
+		      </div>
+                 
+                </form>
+		      
 		      @else
 		      <div class="d-flex justify-content-end">
 		      	<img src="/imagenes/fav.png" style="width: 20px; height: 20px;">

@@ -14,28 +14,22 @@ class AlbumSeeder extends Seeder
     {
         //Iann Dior
         $albums = Album::create([
-        	'nombre' => 'Industry Plant',
-        	'imagen' => 'imagenes/albums/industry.jpg',
-        	'fecha' => '2019/12/08',
-        	'genero' => 'Hip-hop / Rap',
-            'cantante_id' => 1
-        ]);
-        $albums = Album::create([
             'nombre' => 'Nothings ever good enough',
             'imagen' => 'imagenes/albums/nothing.jpg',
             'fecha' => '2019/04/12',
             'genero' => 'Hip-hop / Rap',
             'cantante_id' => 1
         ]);
+        $albums = Album::create([
+        	'nombre' => 'Industry Plant',
+        	'imagen' => 'imagenes/albums/industry.jpg',
+        	'fecha' => '2019/12/08',
+        	'genero' => 'Hip-hop / Rap',
+            'cantante_id' => 1
+        ]);
 
         //Juice WRLD
-        $albums = Album::create([
-        	'nombre' => 'Death Race for Love',
-        	'imagen' => 'imagenes/albums/death.jpg',
-        	'fecha' => '2018/03/08',
-        	'genero' => 'Hip-hop / Rock',
-            'cantante_id' => 2
-        ]);
+        
          $albums = Album::create([
             'nombre' => 'Goodbye & Good Riddance',
             'imagen' => 'imagenes/albums/goodbye.jpg',
@@ -48,6 +42,13 @@ class AlbumSeeder extends Seeder
             'imagen' => 'imagenes/albums/Wrld.jpg',
             'fecha' => '2018/10/19',
             'genero' => 'Hip-hop / Rap',
+            'cantante_id' => 2
+        ]);
+         $albums = Album::create([
+            'nombre' => 'Death Race for Love',
+            'imagen' => 'imagenes/albums/death.jpg',
+            'fecha' => '2019/03/08',
+            'genero' => 'Hip-hop / Rock',
             'cantante_id' => 2
         ]);
     }

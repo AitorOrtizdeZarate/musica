@@ -102,6 +102,8 @@ class cantanteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cantante = Cantante::find($id);
+        $cantante->delete();
+        return redirect()->route('cantante.index');
     }
 }
