@@ -32,7 +32,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                     <a class="dropdown-item text-white bg-dark" href="fav">
+                                     <a class="dropdown-item text-white bg-dark" href="{{route('fav', Auth::user()->id)}}">
                                         {{ __('Favoritos') }}
                                     </a>
                                     <a class="dropdown-item text-white bg-dark" href="{{ route('logout') }}"

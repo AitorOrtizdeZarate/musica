@@ -29,7 +29,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/verify', 'HomeController@verify')->name('verify');
 
 
-Route::get('fav', function () {
-	return view('fav');
-})->middleware('email');
+Route::get('fav/{id}', "favController@favs")->middleware('email')->name('fav');
 
