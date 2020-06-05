@@ -17,10 +17,8 @@
                   @csrf
                   @method('DELETE')
                   <div class="d-flex justify-content-end">
-		      	
-		      	<input type="image" type="submit" src="/imagenes/delete.png" style="width: 20px; height: 20px;">
-		      </div>
-                 
+                  	<input type="image" type="submit" src="/imagenes/delete.png" style="width: 20px; height: 20px;">
+                  </div>                
                 </form>
 		      
 		      @else

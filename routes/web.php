@@ -26,9 +26,10 @@ Route::resource('cancion', 'cancionesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/verify', 'HomeController@verify')->name('verify');
 
 
 Route::get('fav', function () {
 	return view('fav');
-});
+})->middleware('email');
 

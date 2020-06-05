@@ -15,7 +15,7 @@ class EmailVerify
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()){
+        if(auth()->user()->hasVerifiedEmail()){
             return $next($request);
         }
         else{
