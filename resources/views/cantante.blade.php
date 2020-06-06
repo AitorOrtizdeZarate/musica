@@ -24,7 +24,7 @@
 		      
 		      @else
 		      <div class="d-flex justify-content-end">
-		      	<img src="/imagenes/fav.png" style="width: 20px; height: 20px;">
+		      	<a href="{{route('addfav', $cantante->id)}}"><img src="/imagenes/fav.png" style="width: 20px; height: 20px;"></a>
 		      </div>
 		      @endguest
 		    </div>

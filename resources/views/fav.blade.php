@@ -7,7 +7,7 @@
    @foreach($users->cantante as $cantante)
    	<div class="d-flex justify-content-center">
    		<div class="d-flex justify-content-between align-items-center bg-dark flex-row border border-secondary rounded text-white col-6" style="height: 100px;">
-		  <div class="" >
+		  <div>
 		  	<img src="/{{$cantante->imagen}}" style="height: 90px;" class="rounded-circle ">
 		  </div>
 		  <div class="p-2 col-2">
@@ -28,13 +28,3 @@
 
 @endsection
 
-<!-- <div class="border border-black row col-6 bg-white justify-content-between align-items-center">
-	   		<div class="">
-	   			<img src="/{{$cantante->imagen}}" style="height: 100px;" >
-	   		</div>
-	   		<div>
-	   			<h4>{{$cantante->nombre}}</h4>
-	   		</div>
-	   		
-	   		
-	   	</div>-->
