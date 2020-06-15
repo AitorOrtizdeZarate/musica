@@ -22,7 +22,7 @@ class CreateAlbumsTable extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('cantante_id')->nullable();
-            $table->foreign('cantante_id')->references('id')->on('cantantes');
+            $table->foreign('cantante_id')->references('id')->on('cantantes')->onDelete('cascade');
         });
     }
 

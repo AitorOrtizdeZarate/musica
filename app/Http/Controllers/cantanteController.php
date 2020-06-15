@@ -37,6 +37,7 @@ class cantanteController extends Controller
      */
     public function store(Request $request)
     {
+       
         $cantante = new Cantante;
         $cantante->nombre = $request->input('nombre');
         $cantante->edad = $request->input('edad');
