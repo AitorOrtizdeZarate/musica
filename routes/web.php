@@ -32,3 +32,5 @@ Route::get('/verify', 'HomeController@verify')->name('verify');
 Route::get('fav/{id}', "favController@favs")->middleware('email')->name('fav');
 Route::get('/addfav/{id}', "favController@addfav")->name('addfav');
 
+Route::get('llamada', 'apiController@llamada')->name('llamada');
+
