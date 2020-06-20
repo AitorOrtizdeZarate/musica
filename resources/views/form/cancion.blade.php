@@ -26,6 +26,20 @@
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Cancion" class="btn btn-info btn-block col-6">
 		</div>
+		<br>
+		<div>
+			@if ($errors->has('nombre'))
+	            <label style="color: red">
+	                {{$errors->first('nombre')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('duracion'))
+	            <label style="color: red">
+	                {{$errors->first('duracion')}}
+	            </label><br>
+	        @endif
+		</div>
 	</form>
 
 </div>

@@ -38,6 +38,13 @@ class cantanteController extends Controller
     public function store(Request $request)
     {
        
+        $request->validate([
+            'nombre' => 'required',
+            'edad' => 'required|numeric',
+            'imagen' => 'required'
+
+        ]);
+
         $cantante = new Cantante;
         $cantante->nombre = $request->input('nombre');
         $cantante->edad = $request->input('edad');

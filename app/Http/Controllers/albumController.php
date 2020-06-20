@@ -38,6 +38,14 @@ class albumController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'genero' => 'required',
+            'fecha' => 'required|date',
+            'imagen' => 'required'
+
+        ]);
+
         $albums = new Album;
         $albums->nombre = $request->input('nombre');
         $albums->genero = $request->input('genero');

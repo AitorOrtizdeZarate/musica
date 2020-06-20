@@ -24,12 +24,32 @@
 		<div class="d-flex justify-content-between align-items-center">
 			Imagen:
 			<div>
-				<input type="file" name="imagen">
+				<input type="file" name="imagen" value="{{old('imagen')}}">
 			</div>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Cantante" class="btn btn-info btn-block col-6">
+		</div>
+		<br>
+		<div>
+			@if ($errors->has('nombre'))
+	            <label style="color: red">
+	                {{$errors->first('nombre')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('edad'))
+	            <label style="color: red">
+	                {{$errors->first('edad')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('imagen'))
+	            <label style="color: red">
+	                {{$errors->first('imagen')}}
+	            </label><br>
+	        @endif
 		</div>
 	</form>
 </div>

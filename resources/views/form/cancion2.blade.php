@@ -26,6 +26,7 @@
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Cancion" class="btn btn-info btn-block col-6">
 		</div>
+
 	</form>
 
 </div>
@@ -34,6 +35,21 @@
 		<a href="{{route('album.show', $album->id)}}" class="btn btn-info btn-lg btn-block">No hay mas canciones, Ver el Album.</a>
 	</div>
 	</div>
+
+	<br>
+		<div>
+			@if ($errors->has('nombre'))
+	            <label style="color: red">
+	                {{$errors->first('nombre')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('duracion'))
+	            <label style="color: red">
+	                {{$errors->first('duracion')}}
+	            </label><br>
+	        @endif
+		</div>
 </div>
 
 @endsection

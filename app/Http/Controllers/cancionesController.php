@@ -37,6 +37,12 @@ class cancionesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'duracion' => 'required'
+
+        ]);
+
         $canciones = new Cancion;
         $canciones->nombre = $request->input('nombre');
         $canciones->duracion = $request->input('duracion');

@@ -39,6 +39,32 @@
 		<div class="d-flex justify-content-center align-items-center">
 			<input type="submit" value="Añadir Album" class="btn btn-info btn-block col-6">
 		</div>
+		<br>
+		<div>
+			@if ($errors->has('nombre'))
+	            <label style="color: red">
+	                {{$errors->first('nombre')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('genero'))
+	            <label style="color: red">
+	                {{$errors->first('genero')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('fecha'))
+	            <label style="color: red">
+	                {{$errors->first('fecha')}}
+	            </label><br>
+	        @endif
+
+	        @if ($errors->has('imagen'))
+	            <label style="color: red">
+	                {{$errors->first('imagen')}}
+	            </label><br>
+	        @endif
+		</div>
 	</form>
 </div>
 </div>
