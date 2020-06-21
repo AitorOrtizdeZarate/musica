@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cantante;
+use App\Album;
 
 class cantanteController extends Controller
 {
@@ -82,7 +83,8 @@ class cantanteController extends Controller
     public function show($id)
     {
         $cantantes = Cantante::find($id);
-        return view('albums')->with('cantantes', $cantantes);
+        $albums = Album::all()->where('cantante_id', $cantantes->id)->sortBy('fecha');
+        return view('albums')->with('cantantes', $cantantes)->with('albums', $albums);
 
     }
 
@@ -109,22 +111,13 @@ class cantanteController extends Controller
     {
         $request->validate([
             'nombre' => 'required|min:2|max:15',
-            'edad' => 'required|numeric',
-            'imagen' => 'required'
+            'edad' => 'required|numeric'
 
         ]);
-        
+
         $cantante = Cantante::find($id);
         $cantante->nombre = $request->input('nombre');
         $cantante->edad = $request->input('edad');
-
-        //Estas dos lineas guarda la ruta de la foto en la base de datos
-        $foto = $request->file('imagen')->getClientOriginalName();
-        $cantante->imagen = "imagenes/cantantes/".$foto;
-        
-        //Estas dos lineas guardan la imagen seleccionada en la carpeta public
-        $file = $request->file('imagen');
-        $file->storeAs('cantantes',$foto, ['disk' => 'my_files']);
 
         $cantante->save();
         return redirect()->route('cantante.index');

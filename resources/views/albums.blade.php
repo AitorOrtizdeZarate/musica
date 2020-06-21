@@ -21,7 +21,7 @@
 
   	<div class="d-flex justify-content-center">
 	  <div class="card-deck col-8" style="margin-top: 3%;">
-	    @foreach($cantantes->album as $album)
+	    @foreach($albums as $album)
 	    	<div class="col-3" style="height: 500px;">
 			  <div class="card border border-dark">
 			    <img class="card-img-top border-bottom border-dark" src="/{{$album->imagen}}" alt="Card image cap" style="height: 250px;">
