@@ -39,7 +39,7 @@ class cantanteController extends Controller
     {
        
         $request->validate([
-            'nombre' => 'required',
+            'nombre' => 'required|min:2|max:15',
             'edad' => 'required|numeric',
             'imagen' => 'required'
 
@@ -56,6 +56,13 @@ class cantanteController extends Controller
         //Estas dos lineas guardan la imagen seleccionada en la carpeta public
         $file = $request->file('imagen');
         $file->storeAs('cantantes',$foto, ['disk' => 'my_files']);
+
+        //filesystem
+        /*'my_files' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/imagenes',
+        ],*/
+
         
         
         /*$cantante->imagen = $request->file('imagen')->store('imagenes/cantantes/'.$foto);*/
@@ -87,7 +94,8 @@ class cantanteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cantante = Cantante::find($id);
+        return view('form.cantanteEdit')->with('cantante', $cantante);
     }
 
     /**
@@ -99,7 +107,27 @@ class cantanteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nombre' => 'required|min:2|max:15',
+            'edad' => 'required|numeric',
+            'imagen' => 'required'
+
+        ]);
+        
+        $cantante = Cantante::find($id);
+        $cantante->nombre = $request->input('nombre');
+        $cantante->edad = $request->input('edad');
+
+        //Estas dos lineas guarda la ruta de la foto en la base de datos
+        $foto = $request->file('imagen')->getClientOriginalName();
+        $cantante->imagen = "imagenes/cantantes/".$foto;
+        
+        //Estas dos lineas guardan la imagen seleccionada en la carpeta public
+        $file = $request->file('imagen');
+        $file->storeAs('cantantes',$foto, ['disk' => 'my_files']);
+
+        $cantante->save();
+        return redirect()->route('cantante.index');
     }
 
     /**

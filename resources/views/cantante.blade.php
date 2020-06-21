@@ -14,6 +14,10 @@
 		      <h5 class="card-title">{{$cantante->nombre}}</h5>
 		      <p class="card-text">{{$cantante->edad}} años</p>
 		      @guest
+		      <div class="d-flex row justify-content-end">
+		      	 <div class="d-flex justify-content-end mx-2">
+                  	<a href="{{route('cantante.edit', $cantante->id)}}"><img src="/imagenes/update.png" style="width: 20px; height: 20px;"></a>
+                  </div>
 		      <form action="{{route('cantante.destroy', $cantante->id)}}" method="post">
                   @csrf
                   @method('DELETE')
@@ -21,6 +25,7 @@
                   	<input type="image" type="submit" src="/imagenes/delete.png" style="width: 20px; height: 20px;">
                   </div>                
                 </form>
+		      </div>
 		      
 		      @else
 		      <div class="d-flex justify-content-end">
