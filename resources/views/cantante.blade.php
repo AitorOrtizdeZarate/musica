@@ -14,6 +14,8 @@
 		      <h5 class="card-title">{{$cantante->nombre}}</h5>
 		      <p class="card-text">{{$cantante->edad}} años</p>
 		      @guest
+		      @else
+		      @if(auth()->user()->isAdmin())
 		      <div class="d-flex row justify-content-end">
 		      	 <div class="d-flex justify-content-end mx-2">
                   	<a href="{{route('cantante.edit', $cantante->id)}}"><img src="/imagenes/update.png" style="width: 20px; height: 20px;"></a>
@@ -31,6 +33,7 @@
 		      <div class="d-flex justify-content-end">
 		      	<a href="{{route('addfav', $cantante->id)}}"><img src="/imagenes/fav.png" style="width: 20px; height: 20px;"></a>
 		      </div>
+		      @endif
 		      @endguest
 		    </div>
 		    <div class="card-footer">

@@ -41,6 +41,10 @@ class User extends Authenticatable
     public function cantante(){
         return $this->belongsToMany('App\Cantante');
     }
+
+    public function isAdmin(){
+        return ($this->rol=="admin");
+    }
 }
 
 
