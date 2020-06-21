@@ -15,9 +15,14 @@
   	<div>
   		<h2 style="font-size: 50px;">Albums</h2>
   	</div>
+  	@guest
+  	@else
+  	@if(auth()->user()->isAdmin())
   	<div class="d-flex align-items-center justify-content-end mx-5" style="height: 50px;">
 		 <a href="{{route('album.createAlbum', $cantantes->id)}}"><img src="/imagenes/plus.png" style="width: 50px; height: 50px;" class="border border-dark rounded-circle"></a>
 	</div>
+	@endif
+	@endguest
 
   	<div class="d-flex justify-content-center">
 	  <div class="card-deck col-8" style="margin-top: 3%;">
