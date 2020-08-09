@@ -8,9 +8,26 @@
   	<img src="/{{$cantantes->imagen}}" class="rounded-circle border border-dark"  style="width: 325px;">
   </div>
 
-  <!--<hr>
-  <h2 style="font-size: 50px;">Canciones mas escuchadas</h2>
-  -->
+  <hr>
+  <h2 style="font-size: 50px;">Populares</h2>
+
+  <div class="d-flex justify-content-center ">
+  <div class="col-3 row d-flex justify-content-center align-items-center m-2">
+  	@php $i = 0; @endphp
+    @foreach($canciones as $cancion)
+    @if($i < 5)
+        <div class="border border-secondary col-12 d-flex justify-content-between align-items-center  bg-dark text-white rounded" style="height: 40px;" >
+          <p>{{$cancion->nombre}}</p>
+          <p>{{$cancion->duracion}}</p>
+          <p>{{$cancion->repros}}</p>
+          
+        </div>
+    @php $i++ @endphp
+    @endif
+    @endforeach
+    </div>
+  </div>
+  
   <hr> 
   	<div>
   		<h2 style="font-size: 50px;">Albums</h2>

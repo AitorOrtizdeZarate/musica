@@ -9,4 +9,8 @@ class Cancion extends Model
     public function album(){
     	return $this->belongsTo('App\Album');
     }
+
+    public function cantante(){
+    	return $this->belongsTo('App\Cantante');
+    }
 }

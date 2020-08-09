@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cantante;
 use App\Album;
+use App\Cancion;
 
 class cantanteController extends Controller
 {
@@ -84,7 +85,8 @@ class cantanteController extends Controller
     {
         $cantantes = Cantante::find($id);
         $albums = Album::all()->where('cantante_id', $cantantes->id)->sortBy('fecha');
-        return view('albums')->with('cantantes', $cantantes)->with('albums', $albums);
+        $canciones = Cancion::all()->where('cantante_id', $cantantes->id)->sortByDesc('repros');
+        return view('albums')->with('cantantes', $cantantes)->with('albums', $albums)->with('canciones', $canciones);
 
     }
 

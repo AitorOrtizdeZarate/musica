@@ -13,4 +13,8 @@ class Cantante extends Model
     public function user(){
     	return $this->belongsToMany('App\User');
     }
+
+    public function cancion(){
+    	return $this->hasMany('App\Cancion');
+    }
 }

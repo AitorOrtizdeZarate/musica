@@ -22,6 +22,9 @@ class CreateCancionesTable extends Migration
 
             $table->unsignedBigInteger('album_id')->nullable();
             $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
+
+            $table->unsignedBigInteger('cantante_id')->nullable();
+            $table->foreign('cantante_id')->references('id')->on('cantantes')->onDelete('cascade');
         });
     }
 
