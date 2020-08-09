@@ -12,14 +12,27 @@
   <h2 style="font-size: 50px;">Populares</h2>
 
   <div class="d-flex justify-content-center ">
-  <div class="col-3 row d-flex justify-content-center align-items-center m-2">
+  <div class="col-12 row d-flex justify-content-center align-items-center m-2">
   	@php $i = 0; @endphp
     @foreach($canciones as $cancion)
     @if($i < 5)
-        <div class="border border-secondary col-12 d-flex justify-content-between align-items-center  bg-dark text-white rounded" style="height: 40px;" >
-          <p>{{$cancion->nombre}}</p>
-          <p>{{$cancion->duracion}}</p>
-          <p>{{$cancion->repros}}</p>
+        <div class="border border-secondary col-8 d-flex justify-content-between align-items-center  bg-dark text-white rounded" style="height: 60px;" >
+        <div class="col-8 row ">
+        	<div class="col-1">
+        		<img src="/{{$cancion->album->imagen}}" style="height: 50px;">
+        	</div>
+	        <div class="col-1 d-flex justify-content-between align-items-center">
+	        	<p>{{$i+1}}</p>
+	        </div>
+	        <div class="col-3 d-flex justify-content-start align-items-center">
+	        	<p>{{$cancion->nombre}}</p>
+	        </div>
+	        
+        </div>
+        <div>
+        	<p>{{$cancion->repros}}</p>
+        </div>
+          
           
         </div>
     @php $i++ @endphp
